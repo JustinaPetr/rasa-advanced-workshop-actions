@@ -1,0 +1,24 @@
+version: "2.0"
+stories:
+- story: out of scope path
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+- story: help
+  steps:
+  - intent: help
+  - action: utter_help
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_welcome
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
