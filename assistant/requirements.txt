@@ -2,3 +2,4 @@ rasa~=2.2.0
 rasa-sdk~=2.0.0
 pytablewriter
 pandas
+numpy~=1.18.5
