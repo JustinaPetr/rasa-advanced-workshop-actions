@@ -23,7 +23,10 @@ To set up your working environment:
 3. Clone the repository and navigate to the project directory:  
 
 `git clone https://github.com/JustinaPetr/rasa-advanced-workshop-actions.git`  
+
 `cd workshop-advanced-workshop-actions`
+
+`cd assistnat`
 
 
 4. Install the necessary dependencies:
