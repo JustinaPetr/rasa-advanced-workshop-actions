@@ -15,15 +15,11 @@ intents:
 - deny
 
 
-entities:
-- priority
 
 slots:
   confirm:
     type: any
   incident_title:
-    type: any
-  priority:
     type: any
   problem_description:
     type: any
@@ -40,17 +36,6 @@ responses:
   - text: What should we use for the title of this incident?
   utter_ask_problem_description:
   - text: What is the problem description for the issue?
-  utter_ask_priority:
-  - text: What is the priority of this issue?
-    buttons:
-      - payload: /inform{"priority":"low"}
-        title: low
-      - payload: /inform{"priority":"medium"}
-        title: medium
-      - payload: /inform{"priority":"high"}
-        title: high
-  utter_no_priority:
-  - text: Sorry "{priority}" is not a valid priority. Please try again.
   utter_help:
   - text: "I can help you open a service request ticket, or check the status of your open incidents.
       \nYou can ask me things like:
@@ -65,8 +50,7 @@ responses:
   utter_ask_confirm:
   - text: "Should I open an incident with the following details?
           \n    Title: {incident_title}
-          \n    Description: {problem_description}          
-          \n    Priority: {priority}"
+          \n    Description: {problem_description}"
     buttons:
     - title: Yes
       payload: /affirm
