@@ -12,7 +12,7 @@ To use this repository you will need:
 
 To set up your working environment:
 
-1. Create a virtual environment
+1. Create a virtual environments
 
 `python3 -m venv ./venv`
 
