@@ -2,8 +2,8 @@ name: Action Server
 on:
   push:
     branches:
-    - '*'
-    - '!master' 
+    - 'completed-assistant'
+
     
 jobs:
   action_server_job:
