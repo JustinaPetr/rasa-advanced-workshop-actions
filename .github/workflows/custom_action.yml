@@ -7,7 +7,7 @@ on:
     
 jobs:
   action_server_job:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout github action
         uses: actions/checkout@v2
