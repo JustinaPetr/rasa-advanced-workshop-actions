@@ -1,7 +1,7 @@
 # Rasa Advanced Workshop: Custom Actions
 
 This repository contains the sampleproject for the Rasa Advanced Workshop on custom actions. It's a very hands-on workshop 
-so to take the most out of it, we recommend following the instructions presetned in the workshop videos..
+so to take the most out of it, we recommend following the instructions presetned in the workshop videos.
 
 You can find a worked-out example in the branch called "completed-project".
 
