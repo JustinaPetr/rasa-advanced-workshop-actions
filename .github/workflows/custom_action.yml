@@ -2,7 +2,7 @@ name: Action Server
 on:
   push:
     branches:
-    - 'completed_assistant'
+    - '*'
     
     
 jobs:
