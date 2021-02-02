@@ -1,6 +1,6 @@
 name: Action Server
 on:
-  push:
+  pull_request:
     branches:
     - 'completed-assistant'
 
