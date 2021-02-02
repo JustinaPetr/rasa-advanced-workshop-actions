@@ -8,7 +8,7 @@ You can find a worked-out example in the branch called "completed-project".
 To use this repository you will need:
 - Docker
 - Docker Hub account
-- Python 3.7
+- Python 3.7.x
 
 To set up your working environment:
 
