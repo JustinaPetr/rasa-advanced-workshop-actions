@@ -1,8 +1,8 @@
 name: Action Server
 on:
-  pull_request:
+  push:
     branches:
-    - 'completed-assistant'
+    - completed-assistant
 
     
 jobs:
