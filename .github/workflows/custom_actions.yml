@@ -12,8 +12,8 @@ jobs:
       - name: checkout Rasa github action
         uses: RasaHQ/rasa-action-server-gha@v1.0.3
         with:
-          actions_directory: ./actions
-          requirements_file: ./actions/requirements.txt
+          actions_directory: ./assistant/actions
+          requirements_file: ./assistant/actions/requirements.txt
           docker_registry: docker.io
           docker_registry_login: ${{secrets.DOCKER_HUB_LOGIN}}
           docker_registry_password: ${{secrets.DOCKER_HUB_PASSWORD}}
