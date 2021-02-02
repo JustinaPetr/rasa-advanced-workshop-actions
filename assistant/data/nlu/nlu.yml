@@ -83,6 +83,12 @@ nlu:
     - [escalated]{"entity": "priority", "value": "high"}
     - [escalate]{"entity": "priority", "value": "high"}
     - [super high](priority)
+    - [12345](number)
+    - [14452](number)
+    - it' [32456](number)
+    - [j@email.com](email)
+    - [c@email.com](email)
+    - it's [d@email.com](email)
 - intent: out_of_scope
   examples: |
     - what is the square root of 5
@@ -135,6 +141,18 @@ nlu:
     - please no
     - no don't do that
     - no, use abraham.lincoln@example.com
+- intent: chitchat/ask_weather
+  examples: |
+    - what's the weather outside?
+    - can you tell me the weather
+    - I would like to know what the weather will be tomorrow?
+    - tell me the weather
+- intent: chitchat/bot_challenge
+  examples: |
+    - Are you a bot?
+    - am I talking to a chatbot?
+    - Are you a bot of a human?
+    - I think you are a bot
 - synonym: high
   examples: |
     - urgent

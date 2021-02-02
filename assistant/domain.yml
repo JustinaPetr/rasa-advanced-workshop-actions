@@ -13,10 +13,12 @@ intents:
 - restart
 - affirm
 - deny
-
+- chitchat
 
 entities:
 - priority
+- number
+- email
 
 slots:
   confirm:
@@ -25,13 +27,21 @@ slots:
     type: any
   problem_description:
     type: any
+  username:
+    type: any
+    initial_value: "Rasa user"
+  number:
+    type: any
+  email:
+    type: any
 
 
 responses:
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_greet:
-  - text: Hello! I'm your IT Helpdesk Assistant.
+  - text: Hello, {username}! I'm your IT Helpdesk Assistant.
+  - text: Hi, I am an IT Helpdesk Assistant. Ready to help you out.
   utter_goodbye:
   - text: Goodbye!
   utter_ask_incident_title:
@@ -62,6 +72,55 @@ responses:
   - text: Alright, I have cancelled the incident.
   utter_ask_whatelse:
     - text: What else can I help you with?
+  utter_chitchat/ask_weather:
+    - text: I am not a weather presenter but I hope it will be sunny outside.
+  utter_chitchat/bot_challenge:
+    - text: Yes indeed. I was created by a developer of Rasa.
+  utter_ask_number:
+    - text: What is your user id?
+  utter_ask_email:
+    - text: What's your email?
+
+
+actions:
+- action_incident_status
+- action_open_incident
+- validate_open_incident_form
+
+
+forms:
+  open_incident_form:
+    email:
+      - type: from_entity
+        entity: email
+    problem_description:
+      - type: from_text
+        not_intent:
+          - incident_status
+          - help
+          - affirm
+          - deny
+    incident_title:
+      - type: from_trigger_intent
+        intent: password_reset
+        value: "Problem with password"
+      - type: from_trigger_intent
+        intent: problem_email
+        value: "Problem with email"
+      - type: from_text
+        not_intent:
+          - incident_status
+          - help
+          - affirm
+          - deny
+    confirm:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+
 
 session_config:
   session_expiration_time: 0.0

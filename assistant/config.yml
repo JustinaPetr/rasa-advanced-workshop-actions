@@ -15,6 +15,12 @@ pipeline:
 - name: FallbackClassifier
   threshold: 0.7
   ambiguity_threshold: 0.1
+- name: ResponseSelector
+  epochs: 100
+  retrieval_intent: chitchat
+- name: DucklingEntityExtractor
+  url: http://localhost:8000
+  dimensions: ["number", "email"]
 
 
 

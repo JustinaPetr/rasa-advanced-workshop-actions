@@ -1,0 +1,6 @@
+user_id,incident_number,incident_number_status,email
+12345,AAA,pending,j@email.com
+345345,AAAB,completed,b@email.com
+12334,AAABB,declined,j@email.com
+123456,AAABBB,pending,c@email.com
+23456,AAABBBC,completed,d@email.com

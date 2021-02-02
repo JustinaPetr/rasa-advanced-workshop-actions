@@ -6,4 +6,29 @@ rules:
   - action: action_default_fallback
 
 
+- rule: Handle chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: Start incident form
+  steps:
+  - or:
+    - intent: open_incident
+    - intent: password_reset
+    - intent: problem_email
+  - action: open_incident_form
+  - active_loop: open_incident_form
+
+
+- rule: Submit the form
+  condition: 
+    - active_loop: open_incident_form
+  steps:
+    - action: open_incident_form
+    - active_loop: null 
+    - action: action_open_incident
+
+
+
 
