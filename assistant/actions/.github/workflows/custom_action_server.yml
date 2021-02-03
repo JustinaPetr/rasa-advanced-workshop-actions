@@ -1,0 +1,23 @@
+name: Action Server
+on:
+  push:
+    branches: [completed-assitant]
+    
+jobs:
+  action_server_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: chechout github actions
+        uses: actions/checkout@v2
+      - name: Build Action Server image
+        uses: RasaHQ/rasa-action-server-gha@v1.0.3
+        with:
+          actions_directory: ./assistant/actions
+          requirements_file: ./assistant/actions/requirements.txt
+          docker_registry: docker.io
+          docker_registry_login: ${{secrets.DOCKER_HUB_LOGIN}}
+          docker_registry_password: ${{secrets.DOCKER_HUB_PASSWORD}}
+          docker_image_name: ${{secrets.DOCKER_HUB_LOGIN}}/action_server_image_workshop
+          docker_image_tag: 1
+          docker_registry_push: true
+          rasa_sdk_version: 2.2.0
