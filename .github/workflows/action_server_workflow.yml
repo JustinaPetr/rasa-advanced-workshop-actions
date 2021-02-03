@@ -19,5 +19,5 @@ jobs:
           docker_image_name: ${{secrets.DOCKER_HUB_LOGIN}}/action_server_workshop
           docker_image_tag: 1
           docker_registry_push: true
-          rasa_sdk_version: 2.2.0
+          rasa_sdk_verion: 2.2.0
 
