@@ -31,9 +31,9 @@ To set up your working environment:
 
 `git clone https://github.com/JustinaPetr/rasa-advanced-workshop-actions.git`  
 
-`cd workshop-advanced-workshop-actions`
+`cd rasa-advanced-workshop-actions`
 
-`cd assistnat`
+`cd assistant`
 
 
 5. Install the necessary dependencies:
